@@ -58,7 +58,7 @@ In the spirit of evolutionary-architecture a package structure like the one abov
 3) keeping the **Library Module(s)** as they are
 4) making suitable renames to the project (or) existing packages etc.
 
-If the module boundaries in the application are indeed correct, then the above process should, in theory be easy. Ideally you might have even done something to decouple these modules before taking a step to split up the modular-monolith, like using application-events to communicate between modules (so that modules don't know about each other) 
+If the application's module boundaries are correct, splitting the modular monolith should be straightforward. Ideally, you should decouple the modules beforehand, perhaps by using application events for inter-module communication to ensure modules don't depend on each other.
 
 
 
