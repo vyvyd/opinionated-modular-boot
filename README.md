@@ -44,8 +44,21 @@ Broadly, there are two kinds of modules in the applications
 
 ### Dependency Rules 
 1. **Library Modules** MUST NOT depend on any code in **Application Modules**
-2. **Application Modules** CAN depend on published API in **Library Modules**
-3. **Application Modules** MUST NOT have cyclic depdendencies with each other. 
+2. **Application Modules** MUST NOT have cyclic depdendencies with each other.
+3. **Application Modules** CAN ONLY access other **Application Modules** through a published API (marked as such in code)
+4. **Application Modules** CAN ONLY access other **Library Modules** through a published API (marked as such in code)
+
+### Motivation 
+
+#### Design for decomposability 
+In the spirit of evolutionary-architecture a package structure like the one above allows us spawn a new deployable unit (or) service by 
+
+1) copying over the existing project over to a new location
+2) removing the **Application Module(s)** that are not required in the new deployable-unit (or) service
+3) keeping the **Library Module(s)** as they are
+4) making suitable renames to the project (or) existing packages etc.
+
+If the module boundaries in the application are indeed correct, then the above process should, in theory be easy. Ideally you might have even done something to decouple these modules before taking a step to split up the modular-monolith, like using application-events to communicate between modules (so that modules don't know about each other) 
 
 
 
