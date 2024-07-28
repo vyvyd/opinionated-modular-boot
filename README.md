@@ -5,10 +5,8 @@ An opinionated modular-monolith structure for Spring Boot 3.0 applications.
 - Opinionated setup to structure packages within a modular spring-boot application
 - Design your modular-monolith for decomposability
 - How to enforce package boundaries through lightweight architecture tests
-
-## Design considerations 
-
-### Package Structure 
+  
+## Package Structure 
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#64fdd7', 'edgeLabelBackground':'#e8e8e8', 'tertiaryColor': '#64fdd7'}}}%%
@@ -42,13 +40,13 @@ Broadly, there are two kinds of modules in the applications
 - **Library Modules**: These modules are usually cross-cutting concerns that are not domain based.
 - **Application Modules**: These modules deal with the domain of the application, and they can make use of functionality available in either the library-modules or from other application modules that are available alongside.
 
-### Dependency Rules 
+## Dependency Rules 
 1. **Library Modules** MUST NOT depend on any code in **Application Modules**
 2. **Application Modules** MUST NOT have cyclic depdendencies with each other.
 3. **Application Modules** CAN ONLY access other **Application Modules** through a published API (marked as such in code)
 4. **Application Modules** CAN ONLY access other **Library Modules** through a published API (marked as such in code)
 
-### Motivation 
+## Motivation 
 
 #### Design for decomposability 
 In the spirit of evolutionary-architecture a package structure like the one above allows us spawn a new deployable unit (or) service by 
