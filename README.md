@@ -64,8 +64,5 @@ I wanted to have just enough rules to prevent the application modules from turni
 
 ## Verification
 ### Trust, but verify 
-Ideally - a modular structure enforced at compile time (or) build time is an ideal solution. However, this is not always the case, or would involve additional knowledge that your team might not be ready to take on (for instance, use of gradle-submodules). As such - the most simple way we could enforce these boundaries are through testing libraries like `ArchUnit`.
-
-In the example in this project, all these tests are available in `ArchitectureTests.kt` 
-
+A modular structure enforced at compile or build time is ideal, but this might require additional expertise, like using Gradle submodules. A simpler way to enforce boundaries is through testing libraries like ArchUnit. In this project, all such tests can be found in ArchitectureTests.kt.
 
