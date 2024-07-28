@@ -64,5 +64,12 @@ I wanted to have just enough rules to prevent the application modules from turni
 
 ## Verification
 ### Trust, but verify 
-A modular structure enforced at compile or build time is ideal, but this might require additional expertise, like using Gradle submodules. A simpler way to enforce boundaries is through testing libraries like ArchUnit. In this project, all such tests can be found in ArchitectureTests.kt.
+A modular structure enforced at compile or build time is ideal, but this might require additional expertise, like using Gradle submodules. A simpler way to enforce boundaries is through Kotlin/Java package-by-modules and verification of the said modularity using testing libraries like ArchUnit. In this project, all such tests can be found in ArchitectureTests.kt.
+
+The 4 **Dependency Rules** from earlier are covered through these ArchUnit tests.
+
+## What's next? 
+- [ ] Adding functionality + domains so that the working example is complete
+- [ ] How to modularize data (low priority)
+
 
