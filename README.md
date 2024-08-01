@@ -60,7 +60,7 @@ In the spirit of evolutionary-architecture a package structure like the one abov
 If the application's module boundaries are correct, splitting the modular monolith should be straightforward. Ideally, you should decouple the modules beforehand, perhaps by using application events for inter-module communication to ensure modules don't need to know about each other.
 
 ### Have just enough guard-rails
-I wanted to have just enough rules to prevent the application modules from turning into a "big ball of mud." The four Dependency Rules I mentioned help us understand and verify module boundaries before making irreversible decisions, like splitting into microservices or adopting an event-driven architecture.
+I wanted to have just enough rules to prevent the application modules from turning into a "big ball of mud." The four Dependency Rules I mentioned help us understand and verify module boundaries before making hard to reverse decisions, like splitting into microservices or adopting an event-driven architecture.
 
 ## Verification
 ### Trust, but verify 
